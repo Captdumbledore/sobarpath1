@@ -1,0 +1,272 @@
+<html><head><base href="." />
+<style>
+  body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; }
+  #gameCanvas { background: #87CEEB; }
+  #score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  #gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #45a049;
+  }
+</style>
+</head>
+<body>
+<canvas id="gameCanvas"></canvas>
+<div id="score">Score: 0</div>
+<div id="gameOver">
+  <h2>Game Over!</h2>
+  <p>Your Score: <span id="finalScore">0</span></p>
+  <button onclick="restartGame()">Play Again</button>
+</div>
+
+<script>
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+const scoreElement = document.getElementById('score');
+const gameOverElement = document.getElementById('gameOver');
+const finalScoreElement = document.getElementById('finalScore');
+
+// Set canvas size
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+// Game variables
+let score = 0;
+let gameActive = true;
+const gravity = 0.5;
+const jumpForce = -10;
+const obstacleSpeed = 3;
+const obstacleGap = 200;
+const obstacleWidth = 80;
+
+// Dog object
+const dog = {
+  x: canvas.width / 4,
+  y: canvas.height / 2,
+  width: 60,
+  height: 40,
+  velocity: 0,
+  rotation: 0
+};
+
+// Arrays for obstacles and clouds
+let obstacles = [];
+let clouds = [];
+
+// Initialize clouds
+function createClouds() {
+  for (let i = 0; i < 5; i++) {
+    clouds.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * (canvas.height / 2),
+      speed: 0.5 + Math.random() * 0.5
+    });
+  }
+}
+createClouds();
+
+// Create obstacle pairs
+function createObstacle() {
+  const gapPosition = Math.random() * (canvas.height - obstacleGap - 200) + 100;
+  obstacles.push({
+    x: canvas.width,
+    gapTop: gapPosition,
+    gapBottom: gapPosition + obstacleGap,
+    counted: false
+  });
+}
+
+// Draw dog
+function drawDog() {
+  ctx.save();
+  ctx.translate(dog.x + dog.width/2, dog.y + dog.height/2);
+  ctx.rotate(dog.velocity * 0.04);
+  
+  // Body
+  ctx.fillStyle = '#D2691E';
+  ctx.fillRect(-dog.width/2, -dog.height/2, dog.width, dog.height);
+  
+  // Head
+  ctx.fillRect(-dog.width/2 + 40, -dog.height/2 - 15, 25, 25);
+  
+  // Ears
+  ctx.fillStyle = '#8B4513';
+  ctx.fillRect(-dog.width/2 + 45, -dog.height/2 - 25, 8, 15);
+  
+  // Eye
+  ctx.fillStyle = 'black';
+  ctx.fillRect(-dog.width/2 + 55, -dog.height/2 - 10, 4, 4);
+  
+  // Wings
+  ctx.fillStyle = '#FFE4B5';
+  ctx.beginPath();
+  ctx.moveTo(-dog.width/2, -dog.height/2);
+  ctx.lineTo(-dog.width/2 - 20, -dog.height/2 - 15);
+  ctx.lineTo(-dog.width/2, -dog.height/2 + 15);
+  ctx.fill();
+  
+  ctx.restore();
+}
+
+// Draw obstacles
+function drawObstacles() {
+  obstacles.forEach(obstacle => {
+    // Draw top obstacle
+    ctx.fillStyle = '#228B22';
+    ctx.fillRect(obstacle.x, 0, obstacleWidth, obstacle.gapTop);
+    
+    // Draw bottom obstacle
+    ctx.fillRect(obstacle.x, obstacle.gapBottom, obstacleWidth, canvas.height - obstacle.gapBottom);
+  });
+}
+
+// Draw clouds
+function drawClouds() {
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+  clouds.forEach(cloud => {
+    ctx.beginPath();
+    ctx.arc(cloud.x, cloud.y, 30, 0, Math.PI * 2);
+    ctx.arc(cloud.x + 20, cloud.y - 10, 25, 0, Math.PI * 2);
+    ctx.arc(cloud.x + 40, cloud.y, 35, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
+// Draw background
+function drawBackground() {
+  // Sky
+  ctx.fillStyle = '#87CEEB';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  
+  // Ground
+  ctx.fillStyle = '#90EE90';
+  ctx.fillRect(0, canvas.height - 50, canvas.width, 50);
+}
+
+// Update game state
+function update() {
+  if (!gameActive) return;
+  
+  // Update dog position
+  dog.velocity += gravity;
+  dog.y += dog.velocity;
+  
+  // Update clouds
+  clouds.forEach(cloud => {
+    cloud.x -= cloud.speed;
+    if (cloud.x + 100 < 0) cloud.x = canvas.width;
+  });
+  
+  // Update obstacles
+  if (obstacles.length === 0 || obstacles[obstacles.length - 1].x < canvas.width - 300) {
+    createObstacle();
+  }
+  
+  obstacles.forEach(obstacle => {
+    obstacle.x -= obstacleSpeed;
+    
+    // Score point when passing obstacle
+    if (!obstacle.counted && obstacle.x + obstacleWidth < dog.x) {
+      score++;
+      scoreElement.textContent = `Score: ${score}`;
+      obstacle.counted = true;
+    }
+  });
+  
+  // Remove off-screen obstacles
+  obstacles = obstacles.filter(obstacle => obstacle.x + obstacleWidth > 0);
+  
+  // Check collisions
+  if (checkCollision()) {
+    gameOver();
+  }
+}
+
+// Collision detection
+function checkCollision() {
+  if (dog.y + dog.height > canvas.height - 50 || dog.y < 0) return true;
+  
+  return obstacles.some(obstacle => {
+    return (dog.x + dog.width > obstacle.x &&
+            dog.x < obstacle.x + obstacleWidth &&
+            (dog.y < obstacle.gapTop || dog.y + dog.height > obstacle.gapBottom));
+  });
+}
+
+// Game over
+function gameOver() {
+  gameActive = false;
+  gameOverElement.style.display = 'block';
+  finalScoreElement.textContent = score;
+}
+
+// Restart game
+function restartGame() {
+  gameActive = true;
+  score = 0;
+  dog.y = canvas.height / 2;
+  dog.velocity = 0;
+  obstacles = [];
+  scoreElement.textContent = 'Score: 0';
+  gameOverElement.style.display = 'none';
+}
+
+// Game loop
+function gameLoop() {
+  update();
+  
+  drawBackground();
+  drawClouds();
+  drawObstacles();
+  drawDog();
+  
+  requestAnimationFrame(gameLoop);
+}
+
+// Handle input
+canvas.addEventListener('click', () => {
+  if (gameActive) {
+    dog.velocity = jumpForce;
+  }
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.code === 'Space' && gameActive) {
+    dog.velocity = jumpForce;
+  }
+});
+
+// Start game
+gameLoop();
+</script>
+</body></html>

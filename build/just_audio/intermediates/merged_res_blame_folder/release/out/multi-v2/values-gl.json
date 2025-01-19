@@ -1,0 +1,68 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.ryanheise.just_audio-mergeReleaseResources-11:/values-gl/values-gl.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jisto\\.gradle\\caches\\transforms-3\\cc7ff7d1674806c3abaf9960c0062022\\transformed\\jetified-media3-exoplayer-1.4.1\\res\\values-gl\\values-gl.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,129,192,257,336,413,489,588,684",
+                        "endColumns": "73,62,64,78,76,75,98,95,68",
+                        "endOffsets": "124,187,252,331,408,484,583,679,748"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jisto\\.gradle\\caches\\transforms-3\\fb8c97e8f9e2e25ec96239979614642d\\transformed\\core-1.9.0\\res\\values-gl\\values-gl.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "753",
+                        "endColumns": "100",
+                        "endOffsets": "849"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.ryanheise.just_audio-merged_res-13:/values-gl/values-gl.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jisto\\.gradle\\caches\\transforms-3\\cc7ff7d1674806c3abaf9960c0062022\\transformed\\jetified-media3-exoplayer-1.4.1\\res\\values-gl\\values-gl.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,129,192,257,336,413,489,588,684",
+                        "endColumns": "73,62,64,78,76,75,98,95,68",
+                        "endOffsets": "124,187,252,331,408,484,583,679,748"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jisto\\.gradle\\caches\\transforms-3\\fb8c97e8f9e2e25ec96239979614642d\\transformed\\core-1.9.0\\res\\values-gl\\values-gl.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "753",
+                        "endColumns": "100",
+                        "endOffsets": "849"
+                    }
+                }
+            ]
+        }
+    ]
+}

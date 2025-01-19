@@ -1,0 +1,11 @@
+io.flutter.plugins.pathprovider.path_provider_android-jetified-window-1.0.0-beta04-0 C:\Users\jisto\.gradle\caches\transforms-3\3528befa690b74013ddd5411aefeb2ef\transformed\jetified-window-1.0.0-beta04\res
+io.flutter.plugins.pathprovider.path_provider_android-core-1.6.0-1 C:\Users\jisto\.gradle\caches\transforms-3\39ab86b3b13fedca802326024978ac86\transformed\core-1.6.0\res
+io.flutter.plugins.pathprovider.path_provider_android-jetified-annotation-experimental-1.1.0-2 C:\Users\jisto\.gradle\caches\transforms-3\4010471595ce0ac098d7915976834b9b\transformed\jetified-annotation-experimental-1.1.0\res
+io.flutter.plugins.pathprovider.path_provider_android-jetified-window-java-1.0.0-beta04-3 C:\Users\jisto\.gradle\caches\transforms-3\6e76f324a3849940214a1d8911189158\transformed\jetified-window-java-1.0.0-beta04\res
+io.flutter.plugins.pathprovider.path_provider_android-main-4 C:\Users\jisto\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_android-2.2.10\android\src\main\res
+io.flutter.plugins.pathprovider.path_provider_android-release-5 C:\Users\jisto\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_android-2.2.10\android\src\release\res
+io.flutter.plugins.pathprovider.path_provider_android-pngs-6 C:\Users\jisto\OneDrive\Documents\app_program\app\build\path_provider_android\generated\res\pngs\release
+io.flutter.plugins.pathprovider.path_provider_android-resValues-7 C:\Users\jisto\OneDrive\Documents\app_program\app\build\path_provider_android\generated\res\resValues\release
+io.flutter.plugins.pathprovider.path_provider_android-mergeReleaseResources-8 C:\Users\jisto\OneDrive\Documents\app_program\app\build\path_provider_android\intermediates\incremental\release\mergeReleaseResources\merged.dir
+io.flutter.plugins.pathprovider.path_provider_android-mergeReleaseResources-9 C:\Users\jisto\OneDrive\Documents\app_program\app\build\path_provider_android\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+io.flutter.plugins.pathprovider.path_provider_android-merged_res-10 C:\Users\jisto\OneDrive\Documents\app_program\app\build\path_provider_android\intermediates\merged_res\release

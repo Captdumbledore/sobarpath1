@@ -1,0 +1,68 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.ryanheise.just_audio-merged_res-13:/values-tr/values-tr.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jisto\\.gradle\\caches\\transforms-3\\fb8c97e8f9e2e25ec96239979614642d\\transformed\\core-1.9.0\\res\\values-tr\\values-tr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "731",
+                        "endColumns": "100",
+                        "endOffsets": "827"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jisto\\.gradle\\caches\\transforms-3\\cc7ff7d1674806c3abaf9960c0062022\\transformed\\jetified-media3-exoplayer-1.4.1\\res\\values-tr\\values-tr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,132,191,256,317,397,469,559,655",
+                        "endColumns": "76,58,64,60,79,71,89,95,75",
+                        "endOffsets": "127,186,251,312,392,464,554,650,726"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.ryanheise.just_audio-mergeReleaseResources-11:/values-tr/values-tr.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jisto\\.gradle\\caches\\transforms-3\\fb8c97e8f9e2e25ec96239979614642d\\transformed\\core-1.9.0\\res\\values-tr\\values-tr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "731",
+                        "endColumns": "100",
+                        "endOffsets": "827"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jisto\\.gradle\\caches\\transforms-3\\cc7ff7d1674806c3abaf9960c0062022\\transformed\\jetified-media3-exoplayer-1.4.1\\res\\values-tr\\values-tr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,132,191,256,317,397,469,559,655",
+                        "endColumns": "76,58,64,60,79,71,89,95,75",
+                        "endOffsets": "127,186,251,312,392,464,554,650,726"
+                    }
+                }
+            ]
+        }
+    ]
+}

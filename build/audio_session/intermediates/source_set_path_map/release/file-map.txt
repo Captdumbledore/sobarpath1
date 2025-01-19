@@ -1,0 +1,13 @@
+com.ryanheise.audio_session-lifecycle-runtime-2.3.1-0 C:\Users\jisto\.gradle\caches\transforms-3\03c17f49bd1130bef1e00260ea5afb07\transformed\lifecycle-runtime-2.3.1\res
+com.ryanheise.audio_session-jetified-window-1.0.0-beta04-1 C:\Users\jisto\.gradle\caches\transforms-3\3528befa690b74013ddd5411aefeb2ef\transformed\jetified-window-1.0.0-beta04\res
+com.ryanheise.audio_session-media-1.7.0-2 C:\Users\jisto\.gradle\caches\transforms-3\639a7543a285e2cd5e116ae6de98b178\transformed\media-1.7.0\res
+com.ryanheise.audio_session-jetified-window-java-1.0.0-beta04-3 C:\Users\jisto\.gradle\caches\transforms-3\6e76f324a3849940214a1d8911189158\transformed\jetified-window-java-1.0.0-beta04\res
+com.ryanheise.audio_session-jetified-annotation-experimental-1.3.0-4 C:\Users\jisto\.gradle\caches\transforms-3\c0c2964a9d40c52a904c6bcd8da11261\transformed\jetified-annotation-experimental-1.3.0\res
+com.ryanheise.audio_session-core-1.9.0-5 C:\Users\jisto\.gradle\caches\transforms-3\fb8c97e8f9e2e25ec96239979614642d\transformed\core-1.9.0\res
+com.ryanheise.audio_session-main-6 C:\Users\jisto\AppData\Local\Pub\Cache\hosted\pub.dev\audio_session-0.1.23\android\src\main\res
+com.ryanheise.audio_session-release-7 C:\Users\jisto\AppData\Local\Pub\Cache\hosted\pub.dev\audio_session-0.1.23\android\src\release\res
+com.ryanheise.audio_session-pngs-8 C:\Users\jisto\OneDrive\Documents\app_program\app\build\audio_session\generated\res\pngs\release
+com.ryanheise.audio_session-resValues-9 C:\Users\jisto\OneDrive\Documents\app_program\app\build\audio_session\generated\res\resValues\release
+com.ryanheise.audio_session-mergeReleaseResources-10 C:\Users\jisto\OneDrive\Documents\app_program\app\build\audio_session\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.ryanheise.audio_session-mergeReleaseResources-11 C:\Users\jisto\OneDrive\Documents\app_program\app\build\audio_session\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.ryanheise.audio_session-merged_res-12 C:\Users\jisto\OneDrive\Documents\app_program\app\build\audio_session\intermediates\merged_res\release

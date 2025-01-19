@@ -1,0 +1,74 @@
+name: combined_app
+description: A Flutter project with reflection and analysis features.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  just_audio: ^0.9.36
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  firebase_core: ^2.24.2
+  google_generative_ai: ^0.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.11
+
+
+  flutter_launcher_icons: "^0.14.3"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "icon/icon.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+  assets:
+    # Root assets
+    - assets/illustration.png
+    - assets/illustrations.png
+    
+    # Quick work assets
+    - assets/quick_work/profile_image.png
+    - assets/quick_work/amazon_logo.png
+    - assets/quick_work/webflow_logo.png
+    - assets/quick_work/company_logo.png
+    
+    # Community assets
+    - assets/work.jpg
+    - assets/anti_drug.jpg
+    - assets/spirituality.jpg
+    - assets/coming_soon.jpg
+    - assets/profile.jpg
+    - assets/stop_drugs.jpg
+    - assets/drugs1.jpg
+    - assets/drugs2.jpg
+    
+    # Mood Analyzer assets
+    - assets/images/confused_dog.png
+    - assets/images/confused_dog_2.png
+    - assets/images/sad_dog.png
+    - assets/images/neutral_dog.png
+    - assets/images/happy_dog.png
+    - assets/images/flying_dog.png
+    - assets/images/survey4.png
+    
+    # Game assets
+    - assets/images/games/game1.png
+    - assets/images/games/game2.png
+    - assets/audio/happiness.mp3
+    - assets/audio/neutral.mp3
+    - assets/audio/stress.mp3
